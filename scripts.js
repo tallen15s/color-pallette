@@ -6,7 +6,7 @@ const paletteStyles = getComputedStyle(paletteDivs[0]);
 paletteDivs.forEach((paletteDiv, index) => {
   paletteDiv.style.setProperty(
     "background-color",
-    getComputedStyle(paletteDiv).getPropertyValue(`--${index}`)
+
+    paletteStyles.getPropertyValue(`--${index}`)
   );
-  console.log(getComputedStyle(paletteDiv).getPropertyValue("--0"));
 });
